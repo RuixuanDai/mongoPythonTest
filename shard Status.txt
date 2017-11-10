@@ -1,0 +1,66 @@
+1,
+    Shard shard0000 at mongo-shard-1:27017
+    data : 10KiB docs : 282 chunks : 2
+    estimated data per chunk : 5KiB
+    estimated docs per chunk : 141
+
+    Shard shard0001 at mongo-shard-2:27017
+    data : 10KiB docs : 275 chunks : 2
+    estimated data per chunk : 5KiB
+    estimated docs per chunk : 137
+
+    Shard shard0002 at mongo-shard-3:27017
+    data : 16KiB docs : 443 chunks : 2
+    estimated data per chunk : 8KiB
+    estimated docs per chunk : 221
+
+    Totals
+    data : 38KiB docs : 1000 chunks : 6
+    Shard shard0000 contains 28.19% data, 28.19% docs in cluster, avg obj size on shard : 39B
+    Shard shard0001 contains 27.5% data, 27.5% docs in cluster, avg obj size on shard : 39B
+    Shard shard0002 contains 44.3% data, 44.3% docs in cluster, avg obj size on shard : 39B
+
+2,
+    Shard shard0000 at mongo-shard-1:27017
+    data : 10KiB docs : 272 chunks : 2
+    estimated data per chunk : 5KiB
+    estimated docs per chunk : 136
+
+    Shard shard0001 at mongo-shard-2:27017
+    data : 10KiB docs : 281 chunks : 2
+    estimated data per chunk : 5KiB
+    estimated docs per chunk : 140
+
+    Shard shard0002 at mongo-shard-3:27017
+    data : 17KiB docs : 447 chunks : 2
+    estimated data per chunk : 8KiB
+    estimated docs per chunk : 223
+
+    Totals
+    data : 38KiB docs : 1000 chunks : 6
+    Shard shard0000 contains 27.2% data, 27.2% docs in cluster, avg obj size on shard : 39B
+    Shard shard0001 contains 28.1% data, 28.1% docs in cluster, avg obj size on shard : 39B
+    Shard shard0002 contains 44.7% data, 44.7% docs in cluster, avg obj size on shard : 39B
+
+
+3, EC2 write shard status
+    Shard shard0000 at mongo-shard-1:27017
+    data : 0B docs : 0 chunks : 2
+    estimated data per chunk : 0B
+    estimated docs per chunk : 0
+
+    Shard shard0001 at mongo-shard-2:27017
+    data : 20KiB docs : 530 chunks : 2
+    estimated data per chunk : 10KiB
+    estimated docs per chunk : 265
+
+    Shard shard0002 at mongo-shard-3:27017
+    data : 17KiB docs : 470 chunks : 2
+    estimated data per chunk : 8KiB
+    estimated docs per chunk : 235
+
+    Totals
+    data : 38KiB docs : 1000 chunks : 6
+    Shard shard0000 contains 0% data, 0% docs in cluster, avg obj size on shard : NaNGiB
+    Shard shard0001 contains 53% data, 53% docs in cluster, avg obj size on shard : 39B
+    Shard shard0002 contains 47% data, 47% docs in cluster, avg obj size on shard : 39B

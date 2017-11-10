@@ -1,0 +1,104 @@
+1), 1000 small entries without sharding on local wustl:
+    Entry:
+        dataEntry['_id']=time.time()
+            dataEntry['x']=i  //i in range(1000)
+            dataEntry['y']=i
+            dataEntry['z']=i
+    result:
+        times: 0  runTime(s): 36.224750042
+        times: 1  runTime(s): 36.1189980507
+        times: 2  runTime(s): 36.1036560535
+        times: 3  runTime(s): 36.0172829628
+        times: 4  runTime(s): 35.9382100105
+        times: 5  runTime(s): 36.3236260414
+        times: 6  runTime(s): 36.2018821239
+        times: 7  runTime(s): 36.0321290493
+        times: 8  runTime(s): 36.6131060123
+        times: 9  runTime(s): 36.4603710175
+        [36.03368592262268, 36.17575216293335, 36.33422303199768, 36.22946095466614, 36.15973901748657, 36.22064995765686, 36.00130891799927, 36.433459997177124, 36.4292528629303, 36.22091197967529]
+
+2)  1000 small entries without sharding on AWS EC2 Query node:
+    result:
+        times: 0  runTime(s): 0.573128938675
+        times: 1  runTime(s): 0.608037948608
+        times: 2  runTime(s): 0.601125955582
+        times: 3  runTime(s): 0.593991994858
+        times: 4  runTime(s): 0.599665880203
+        times: 5  runTime(s): 0.602031946182
+        times: 6  runTime(s): 0.621690034866
+        times: 7  runTime(s): 0.59451508522
+        times: 8  runTime(s): 0.594913005829
+        times: 9  runTime(s): 0.610102176666
+        [0.5724399089813232, 0.5984199047088623, 0.6033511161804199, 0.6179261207580566, 0.6008930206298828, 0.619534969329834, 0.6125259399414062, 0.6130208969116211, 0.5952038764953613, 0.592736005783081]
+
+3) 10000 small entries without sharding on AWS EC2 Query node:
+    result:
+        times: 0  runTime(s): 5.98805594444
+        times: 1  runTime(s): 5.66992092133
+        times: 2  runTime(s): 5.81364583969
+        times: 3  runTime(s): 5.76059007645
+        times: 4  runTime(s): 5.57592010498
+        times: 5  runTime(s): 5.82751703262
+        times: 6  runTime(s): 5.63926482201
+        times: 7  runTime(s): 5.65373396873
+        times: 8  runTime(s): 5.49300503731
+        times: 9  runTime(s): 5.86952590942
+        [5.988055944442749, 5.669920921325684, 5.813645839691162, 5.760590076446533, 5.575920104980469, 5.827517032623291, 5.639264822006226, 5.653733968734741, 5.493005037307739, 5.869525909423828]
+
+4) 1000 small entries withsharding on local wustl:
+    result:
+        smallWithSharding...
+        0 :  delTime(s): 0.331488132477 ,  writeTime(s): 36.1932690144
+        smallWithSharding...
+        1 :  delTime(s): 0.0385639667511 ,  writeTime(s): 36.9919519424
+        smallWithSharding...
+        2 :  delTime(s): 0.0463180541992 ,  writeTime(s): 36.5977311134
+        smallWithSharding...
+        3 :  delTime(s): 0.0384540557861 ,  writeTime(s): 36.8077669144
+        smallWithSharding...
+        4 :  delTime(s): 0.0418770313263 ,  writeTime(s): 36.5894100666
+        smallWithSharding...
+        5 :  delTime(s): 0.0416529178619 ,  writeTime(s): 36.5300610065
+        smallWithSharding...
+        6 :  delTime(s): 0.0379929542542 ,  writeTime(s): 36.320743084
+        smallWithSharding...
+        7 :  delTime(s): 0.0377461910248 ,  writeTime(s): 36.0217778683
+        smallWithSharding...
+        8 :  delTime(s): 0.0402181148529 ,  writeTime(s): 36.1359329224
+        smallWithSharding...
+        9 :  delTime(s): 0.0374310016632 ,  writeTime(s): 36.4585042
+        [0.33148813247680664, 0.03856396675109863, 0.04631805419921875, 0.03845405578613281, 0.041877031326293945, 0.04165291786193848, 0.03799295425415039, 0.03774619102478027, 0.04021811485290527, 0.03743100166320801]
+        [36.19326901435852, 36.99195194244385, 36.59773111343384, 36.807766914367676, 36.589410066604614, 36.53006100654602, 36.32074308395386, 36.021777868270874, 36.13593292236328, 36.45850419998169]
+
+5) 1000 small entries withsharding on AWS EC2 Query node:
+    result:
+        smallWithSharding...
+        0 :  delTime(s): 0.0132110118866 ,  writeTime(s): 0.656365871429
+        smallWithSharding...
+        1 :  delTime(s): 0.00805497169495 ,  writeTime(s): 0.603943109512
+        smallWithSharding...
+        2 :  delTime(s): 0.00500917434692 ,  writeTime(s): 0.566615819931
+        smallWithSharding...
+        3 :  delTime(s): 0.00824999809265 ,  writeTime(s): 0.558720827103
+        smallWithSharding...
+        4 :  delTime(s): 0.00845003128052 ,  writeTime(s): 0.566342115402
+        smallWithSharding...
+        5 :  delTime(s): 0.00804090499878 ,  writeTime(s): 0.662132024765
+        smallWithSharding...
+        6 :  delTime(s): 0.00815415382385 ,  writeTime(s): 0.660185813904
+        smallWithSharding...
+        7 :  delTime(s): 0.00830984115601 ,  writeTime(s): 0.674787044525
+        smallWithSharding...
+        8 :  delTime(s): 0.00781106948853 ,  writeTime(s): 0.604562997818
+        smallWithSharding...
+        9 :  delTime(s): 0.00850105285645 ,  writeTime(s): 0.595116853714
+        [0.01321101188659668, 0.008054971694946289, 0.005009174346923828, 0.008249998092651367, 0.008450031280517578, 0.008040904998779297, 0.008154153823852539, 0.00830984115600586, 0.007811069488525391, 0.008501052856445312]
+        [0.6563658714294434, 0.6039431095123291, 0.5666158199310303, 0.5587208271026611, 0.5663421154022217, 0.6621320247650146, 0.6601858139038086, 0.6747870445251465, 0.6045629978179932, 0.5951168537139893]
+
+
+
+
+
+
+
+
